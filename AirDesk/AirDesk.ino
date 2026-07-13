@@ -5,7 +5,6 @@
 
 #include <lvgl.h>
 #include "lvgl_v8_port.h"
-#include <demos/lv_demos.h>
 
 using namespace esp_panel::drivers;
 using namespace esp_panel::board;
