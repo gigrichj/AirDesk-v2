@@ -5,6 +5,7 @@
 
 #include <lvgl.h>
 #include "lvgl_v8_port.h"
+#include <demos/lv_demos.h>
 
 using namespace esp_panel::drivers;
 using namespace esp_panel::board;
@@ -62,11 +63,9 @@ void setup()
         label_2, "ESP32_Display_Panel (%d.%d.%d)",
         ESP_PANEL_VERSION_MAJOR, ESP_PANEL_VERSION_MINOR, ESP_PANEL_VERSION_PATCH
     );
-    lv_obj_set_style_text_font(label_2, &lv_font_montserrat_16, 0);
     lv_obj_align_to(label_2, label_1, LV_ALIGN_OUT_BOTTOM_MID, 0, 10);
     lv_obj_t *label_3 = lv_label_create(lv_scr_act());
     lv_label_set_text_fmt(label_3, "LVGL (%d.%d.%d)", LVGL_VERSION_MAJOR, LVGL_VERSION_MINOR, LVGL_VERSION_PATCH);
-    lv_obj_set_style_text_font(label_3, &lv_font_montserrat_16, 0);
     lv_obj_align_to(label_3, label_2, LV_ALIGN_OUT_BOTTOM_MID, 0, 10);
 
     /**
@@ -80,7 +79,7 @@ void setup()
      * Or try out a demo.
      * Don't forget to uncomment header and enable the demos in `lv_conf.h`. E.g. `LV_USE_DEMO_WIDGETS`
      */
-    airdesk_init();
+lv_demo_widgets();
     // lv_demo_benchmark();
     // lv_demo_music();
     // lv_demo_stress();
