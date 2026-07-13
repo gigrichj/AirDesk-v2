@@ -1,3 +1,5 @@
+#define LV_CONF_INCLUDE_SIMPLE
+
 #include <Arduino.h>
 #include <esp_display_panel.hpp>
 
