@@ -58,7 +58,7 @@ lv_obj_t *label = lv_label_create(lv_scr_act());
 lv_label_set_text(
     label,
     "AIRDESK\n\n"
-    "Display Online\n"
+    "New Firmware Loaded\n"
     "Waveshare ESP32-S3"
 );
 
